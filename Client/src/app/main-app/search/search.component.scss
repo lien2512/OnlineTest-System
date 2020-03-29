@@ -1,0 +1,79 @@
+:host {
+    ::ng-deep{
+        .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+            border-color: #4a2f72;
+        }
+        .mat-radio-button.mat-accent .mat-radio-inner-circle{
+            background-color: #4a2f72;
+        }
+    }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .search-wrap {
+    margin: 16px;
+    border-radius: 50px;
+    background-color: #dac2ff;
+    height: 50px;
+    padding: 0 16px;
+    width: calc(100% - 32px);
+
+    input {
+      background-color: #dac2ff;
+      border: none;
+      border-radius: 50px;
+      height: 100%;
+      width: calc(100% - 16px);
+      color: rgb(0, 0, 0);
+
+      &:focus {
+        border: none;
+        outline: none;
+
+        .search-wrap {
+          border: 1px solid rgb(0, 163, 238);
+        }
+      }
+    }
+
+  }
+  .tag-wrap{
+      margin: 0 16px;
+      .tag{
+          margin-right: 8px;
+           width: 200px;
+           height: 40px;
+           color: #fff;
+           background-color: #140033;
+           border: 1px solid #ccc;
+           border-radius: 20px;
+           text-align: center;
+           line-height: 40px;
+           font-weight: bold;
+           cursor: pointer;
+           &:hover{
+               background-color: #dac2ff;
+               color: #000000;
+               transform: scale(1.02);
+           }
+      }
+  }
+  .condition-search{
+      .title{
+          text-align: left;
+          font-size: 14px;
+          margin-bottom: 10px;;
+      }
+  }
+  .btn-normal{
+    width: 100%; background: #dac2ff; 
+  }
+  .selected{
+      background-color: #4a2f72;
+      color: #fff;
+  }
+}

@@ -1,0 +1,91 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    .side-nav {
+        height: 100%;
+        width: 200px;
+        overflow: auto;
+        background-color: #4a2f72;
+        color: #fff;
+        width: 200px;
+        .logo{
+            width: 50px;
+            height: 50px;
+            background: url(/assets/Image/globe.png) no-repeat center;
+            background-size: contain;
+        }
+        .title{
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .nav-item{
+            color: #fff;
+        }
+    }
+    .content{
+        position: relative;
+        height: 100%;
+        .toolbar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 1px 1px 1px 1px #ccc;
+        }
+        .main-content{
+            position: absolute;
+            left: 0;
+            top: 67px;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            background-color: #fff;
+        }
+    }
+    .selected{
+        border: 1px solid #ccc;
+        /* opacity: 0.8; */
+        color: #000;
+        background: #dac2ff;
+        cursor: pointer;
+        .nav-item, mat-icon{
+            color: #4a2f72;
+        }
+    }
+
+}
+
+:host {
+  ::ng-deep {
+    mat-drawer-content {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    mat-divider{
+        margin-top: 8px;
+        background-color: #fff;
+    }
+    mat-list{
+        mat-list-item{
+            
+            mat-icon{
+                margin-right: 8px;
+                color: #fff;
+                cursor: pointer;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+  }
+}

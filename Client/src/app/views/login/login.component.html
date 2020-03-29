@@ -1,0 +1,38 @@
+<div class="login-container d-flex justify-content-center align-items-center">
+    <div class="login-main">
+        <div class="title mb-5">
+            <span style="font-size: 38px;"> online test <br></span>
+            Đăng nhập ngay để cùng ôn tập nào !!!!!!
+        </div>
+        <div class="">
+            <div class="form-group">
+                <mat-form-field appearance="legacy">
+                    <mat-icon matPrefix class="mr-3">person</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                    <mat-label>User</mat-label>
+                    <input matInput placeholder="Enter your user">
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="legacy">
+                    <mat-icon matPrefix class="mr-3">vpn_key</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                    <mat-label>password</mat-label>
+                    <input matInput [type]="'password'" placeholder="Enter your password">
+                </mat-form-field>
+            </div>
+            <div class="form-group d-flex justify-content-between" >
+                <button mat-flat-button class="btn-login btn">Login</button>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div><a href="#">forgot password?</a></div>
+                <div><a href="#">new user? Register now</a></div>
+            </div>
+            <div class="form-group  d-flex justify-content-center title">Or</div>
+            <div class="d-flex justify-content-between">
+                <button mat-flat-button class="btn-face btn">Facebook</button>
+                <button mat-flat-button class="btn-mail btn">Gmail</button>
+            </div>
+        </div>
+    </div>
+</div>

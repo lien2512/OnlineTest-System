@@ -1,0 +1,75 @@
+:host{
+    ::ng-deep{
+        mat-icon{
+            color: #4a2f72;
+        }
+    }
+    .img-sugest{
+        width: 90%;
+        height: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.img-easy{
+            background-image: url(/assets/Image/easy.svg);
+        }
+        &.img-makemoney{
+            background-image: url(/assets/Image/makemoney.svg);
+        }
+    }
+    .title{
+        font-size: 20px;
+    }
+    .title-samll{
+        color: rgb(146, 146, 146);
+    }
+    .block-wrap{
+        margin: 8px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        .img{
+            width: 100%;
+            height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &.img-user{
+                background-image: url(/assets/Image/gioi_thieu/user.svg);
+            }
+            &.img-question{
+                background-image: url(/assets/Image/gioi_thieu/book.svg);
+            }
+            &.img-book{
+                background-image: url(/assets/Image/gioi_thieu/question.svg);
+            }
+            &.img-title{
+                background-image: url(/assets/Image/gioi_thieu/smart-car.svg);
+            }
+        }
+    }
+    .search-wrap {
+        margin: 16px;
+        border-radius: 50px;
+        background-color: #dac2ff;
+        height: 50px;
+        padding: 0 16px;
+        width: calc(100% - 32px);
+    
+        input {
+          background-color: #dac2ff;
+          border: none;
+          border-radius: 50px;
+          height: 100%;
+          width: calc(100% - 16px);
+          color: rgb(0, 0, 0);
+    
+          &:focus {
+            border: none;
+            outline: none;
+    
+          }
+        }
+    
+      }
+}

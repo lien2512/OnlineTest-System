@@ -1,0 +1,10 @@
+<div class="test-wrap">
+    <div class="justify-content-center d-flex mb-3">
+        <div class="img-test"></div>
+    </div>
+    <div class="title pl-2 pr-2 mb-1" matTooltip="{{test.Name}}">{{test?.Name}}</div>
+    <div class="small-text  pl-2 pr-2 mb-1">{{test?.Title}}</div>
+    <div class="title  pl-2 pr-2 mb-1" *ngIf="test?.Passwodrs != null"></div>
+    <div class="title  pl-2 pr-2 mb-1" *ngIf="test?.Passwodrs == null">Miễn phí</div>
+    <div class="small-text  pl-2 pr-2">{{test?.createdDate }}</div>
+</div>

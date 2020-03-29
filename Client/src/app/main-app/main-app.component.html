@@ -1,0 +1,64 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="side-nav pl-2 pr-2" #drawer [mode]="'side'" opened="true">
+        <div>
+            <mat-list>
+                <mat-list-item class="d-flex justify-content-center" >
+                    <div class="logo mr-2"></div>
+                    <div class="title">Online Test</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 1}" (click)="redirectTo(1)">
+                    <mat-icon>home</mat-icon>
+                    <div class="nav-item">Trang chủ</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 2}" (click)="redirectTo(2)">
+                    <mat-icon>search</mat-icon>
+                    <div class="nav-item">Tìm kiếm</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 3}" (click)="redirectTo(3)">
+                    <mat-icon>flag</mat-icon>
+                    <div class="nav-item">Kênh nổi bật</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 4}" (click)="redirectTo(4)">
+                    <mat-icon>notifications_active</mat-icon>
+                    <div class="nav-item">Thông báo</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 5}" (click)="redirectTo(5)">
+                    <mat-icon>account_box</mat-icon>
+                    <div class="nav-item">Kênh cá nhân</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 6}" (click)="redirectTo(6)">
+                    <mat-icon>dashboard</mat-icon>
+                    <div class="nav-item">Tổng quan</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center" [ngClass]="{'selected': selectedPage === 7}" (click)="redirectTo(7)">
+                    <mat-icon>library_books</mat-icon>
+                    <div class="nav-item">Lịch sử làm bài</div>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+        <mat-toolbar class="toolbar d-flex justify-content-between">
+            <button mat-icon-button>
+                <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+            </button>
+            <div class="d-flex justify-content-center align-items-center">
+                <button mat-icon-button>
+                    <mat-icon>perm_identity</mat-icon>
+                </button>
+                <div>Nguyễn Thị Ngọc</div>
+                <button mat-icon-button>
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+        <div class="main-content">
+            
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
+    </mat-drawer-content>
+</mat-drawer-container>

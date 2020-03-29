@@ -1,0 +1,60 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="side-nav pl-2 pr-2" #drawer [mode]="'side'" opened="true">
+        <div>
+            <mat-list>
+                <mat-list-item class="d-flex justify-content-center">
+                    <div class="logo mr-2"></div>
+                    <div class="title">Online Test</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>account_balance</mat-icon>
+                    <div class="nav-item">Ngân hàng câu hỏi</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>assignment</mat-icon>
+                    <div class="nav-item">Quản lý đề thi</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>notifications_active</mat-icon>
+                    <div class="nav-item">Thông báo</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>account_box</mat-icon>
+                    <div class="nav-item">Profile</div>
+                </mat-list-item>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>dashboard</mat-icon>
+                    <div class="nav-item">Tổng quan</div>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item class="d-flex align-items-center">
+                    <mat-icon>settings</mat-icon>
+                    <div class="nav-item">Cài đặt</div>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+        <mat-toolbar class="toolbar d-flex justify-content-between">
+            <button mat-icon-button>
+                <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+            </button>
+            <div class="d-flex justify-content-center align-items-center">
+                <button mat-icon-button>
+                    <mat-icon>perm_identity</mat-icon>
+                </button>
+                <div>Nguyễn Thị Ngọc</div>
+                <button mat-icon-button>
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar>
+        <div class="main-content">
+            
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
+    </mat-drawer-content>
+</mat-drawer-container>
