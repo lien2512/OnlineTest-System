@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -51,36 +52,44 @@ export class DashboardComponent implements OnInit {
 
   ];
 
-  listChannel: Array <any> = [
+  listChannel: Array<any> = [
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     },
     {
+      Id: 1,
       Name: 'Hóa học 24h',
       AmountFollow: 11245
     }
@@ -89,48 +98,56 @@ export class DashboardComponent implements OnInit {
   date: Date = new Date();
   listTest: Array<any> = [
     {
+      Id: 1,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 2,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 3,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 4,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 5,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 6,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 7,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
       createdDate: this.date
     },
     {
+      Id: 8,
       Name: 'Đề thi thử THPTQG hóa học năm 2020',
       Passwodrs: null,
       Title: 'Hóa học 24h',
@@ -139,9 +156,25 @@ export class DashboardComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
+  }
+
+  // đi vào bài test
+  goToTestById(test) {
+    if (test && test.Id) {
+      const url = 'main/test/' + test.Id;
+      this.route.navigate([url]);
+    }
+  }
+
+  // đi vào kênh cá nhân
+  goToChannelById(channel) {
+    if (channel && channel.Id) {
+      const url = 'main/channel/' + channel.Id;
+      this.route.navigate([url]);
+    }
   }
 
 }

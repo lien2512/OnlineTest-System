@@ -13,8 +13,14 @@ import { TestComponent } from './dashboard/use-control/test/test.component';
 import { SearchComponent } from './search/search.component';
 import { HistoryTestComponent } from './history-test/history-test.component';
 import { PersonalChannelComponent } from './personal-channel/personal-channel.component';
+import { TestPageComponent } from './test-page/test-page.component';
 import { HightlightchanelComponent } from './hightlightchanel/hightlightchanel.component';
-
+import {TemplateTableModule} from "../control/template-table/template-table.module";
+import { ResultComponent } from './dashboard/use-control/result/result.component';
+import { RankComponent } from './dashboard/use-control/rank/rank.component';
+import { UserComponent } from './dashboard/use-control/user/user.component';
+import { OrderNumberComponent } from './dashboard/use-control/order-number/order-number.component';
+import { InfoChannelComponent } from './dashboard/use-control/info-channel/info-channel.component';
 
 
 @NgModule({
@@ -27,14 +33,21 @@ import { HightlightchanelComponent } from './hightlightchanel/hightlightchanel.c
     SearchComponent,
     HistoryTestComponent,
     PersonalChannelComponent,
-    HightlightchanelComponent
+    HightlightchanelComponent,
+    TestPageComponent,
+    ResultComponent,
+    RankComponent,
+    UserComponent,
+    OrderNumberComponent,
+    InfoChannelComponent
   ],
-  imports: [
-    CustomMaterialModule,
-    FormsModule,
-    CommonModule,
-    MainAppRoutingModule
-  ],
+    imports: [
+        CustomMaterialModule,
+        FormsModule,
+        CommonModule,
+        MainAppRoutingModule,
+        TemplateTableModule
+    ],
   providers: [],
   bootstrap: [MainAppComponent]
 })

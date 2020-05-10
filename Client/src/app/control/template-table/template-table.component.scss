@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+  box-shadow: none;
+  }
+.textname{
+  cursor: pointer;
+
+  color: #4a2f72;
+  &:hover{
+    text-decoration: underline;
+  }
+}

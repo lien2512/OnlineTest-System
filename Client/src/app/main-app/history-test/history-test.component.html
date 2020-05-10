@@ -1,1 +1,22 @@
-<p>history-test works!</p>
+<div class="container">
+    <div class="col-12 input-group d-flex justify-content-center mt-3">
+      <mat-form-field class="col-3 combo-box">
+                  <mat-label class="ml-3 text-white" >Môn</mat-label>
+                  <mat-select class="pl-3" style="color: white">
+                    <mat-option *ngFor="let sub of dataSubj" [value]="sub" style="color: white">{{sub.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+      <div class="col-9 search-wrap d-flex justify-content-center align-items-center">
+        <input type="text" placeholder="">
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </div>
+
+
+  <div class="mt-3">
+    <template-table [totalPage]="totalPage" [displayedColumns]="displayedColumns" [dataSource]="dataSource" [Columns]="Columns" (open)="viewTest($event)">
+    </template-table>
+  </div>
+</div>

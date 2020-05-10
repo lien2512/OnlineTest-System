@@ -1,3 +1,5 @@
+import { TestPageComponent } from './test-page/test-page.component';
+import { TestComponent } from './dashboard/use-control/test/test.component';
 import { SearchComponent } from './search/search.component';
 import { MainAppComponent } from './main-app.component';
 import { NgModule, Component } from '@angular/core';
@@ -6,8 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HistoryTestComponent } from './history-test/history-test.component';
 import { PersonalChannelComponent } from './personal-channel/personal-channel.component';
-import {HightlightchanelComponent} from "./hightlightchanel/hightlightchanel.component";
-
+import {HightlightchanelComponent} from './hightlightchanel/hightlightchanel.component';
+import {ItemTagComponent} from "./dashboard/use-control/item-tag/item-tag.component";
+import {ResultComponent} from "./dashboard/use-control/result/result.component";
 
 const routes: Routes = [
   {
@@ -39,8 +42,16 @@ const routes: Routes = [
         component: DashboardComponent
       },
       {
-        path: 'channel',
+        path: 'channel/:id',
         component: HightlightchanelComponent
+      },
+      {
+        path: 'test/:id',
+        component: TestPageComponent
+      },
+      {
+        path: 'result',
+        component: ResultComponent
       },
       // duong dan khac thi mac dinh ve home
       {

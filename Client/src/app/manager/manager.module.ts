@@ -1,3 +1,4 @@
+import { TemplateTableModule } from './../control/template-table/template-table.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ManagerTestComponent } from './manager-test/manager-test.component';
@@ -8,6 +9,8 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
 import { FormsModule } from '@angular/forms';
 import { ManagerRoutingModule } from './manager-routing.module';
 import { ManagerComponent } from './manager.component';
+import { ViewTestComponent } from './manager-test/bottomSheet/view-test/view-test.component';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material';
 
 
 
@@ -17,15 +20,20 @@ import { ManagerComponent } from './manager.component';
     ManagerTestComponent,
     ManagerBankQuestionsComponent,
     ProfileComponent,
-    DashboardChannelComponent
+    DashboardChannelComponent,
+    ViewTestComponent
   ],
   imports: [
     CustomMaterialModule,
     FormsModule,
     CommonModule,
-    ManagerRoutingModule
+    ManagerRoutingModule,
+    TemplateTableModule
   ],
-  providers: [],
+  entryComponents: [ViewTestComponent],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
   bootstrap: [ManagerComponent]
 })
 export class ManagerModule { }

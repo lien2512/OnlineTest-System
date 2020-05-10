@@ -11,21 +11,20 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { RegisterComponent } from './views/register/register.component';
 import { ManagerComponent } from './manager/manager.component';
 // import { DashboardComponent } from './main-app/dashboard/dashboard.component';
-// import { MainAppComponent } from './main-app/main-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CustomMaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,48 @@
+:host {
+  .search-wrap {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #e7dcf7;
+    height: 50px;
+    width: 60%;
+    border: none;
+    input {
+      background-color: #e7dcf7;
+      border: none;
+      height: 85%;
+      width: calc(100% - 16px);
+      margin-left: 10px;
+      &:focus {
+        outline: none;
+        border-color: #e7dcf7;
+
+        .search-wrap {
+          border: 1px solid rgb(0, 163, 238);
+        }
+      }
+    }
+
+  }
+  .combo-box {
+    background-color: #4a2f72;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    //border: 1px solid;
+    //width: 200px;
+    color: white;
+    .mat-select-value-text {
+      color: white;
+    }
+    option {
+      height: 40px;
+      background-color: #eadcff;
+    }
+  }
+  .table {
+    background-color: #dac2ff;
+  }
+  div.mat-select-value {
+    color: white;
+  }
+}
