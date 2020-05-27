@@ -1,0 +1,57 @@
+:host {
+  .result {
+    border-radius: 20px;
+    background-color: transparent;
+    :hover {
+      background-color: #faf9f9;
+    }
+    tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+    th {
+      text-align: right;
+      width: 200px;
+      padding: 0.25rem 0.25rem 0.25rem 10px;
+    }
+    td {
+      padding: 0.25rem 0.25rem 0.25rem 10px;
+    }
+
+  }
+  .demo {
+    text-decoration: none;
+    font-family: Roboto,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: #dac2ff;
+    background-image: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: 0;
+    overflow: visible;
+    margin: 0 5px 5px 0;
+    color: #d04437;
+  }
+  .icon {
+    border: 0;
+    background: #fff none center / 10px no-repeat scroll;
+    height: 20px;
+    margin-top: 20px;
+    border-radius: 0 0 3px 3px;
+  }
+  .info-title {
+    background-color: #eadcff;
+    border: 1px solid #ddd;
+    float: none;
+    padding: 15px;
+    width: 100%;
+    //width: auto;
+    border-radius: 3px;
+
+  }
+
+}

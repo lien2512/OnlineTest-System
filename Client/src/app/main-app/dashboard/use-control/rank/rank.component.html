@@ -1,0 +1,9 @@
+<mat-card class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center">
+    <h4>Xếp hạng</h4>
+  </div>
+  <div>Cập nhật {{date | date: 'medium'}}</div>
+  <div>
+  <app-user class="row mt-2 mb-2" *ngFor="let item of listUser; index as i" [Item]="item"></app-user>
+  </div>
+</mat-card>
